@@ -1,20 +1,21 @@
 // component in react js is just a javascript function
 
+import Card from '../UI/Card';
 import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
 import "./ExpenseItem.css";
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   // should return only one root element
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <ExpenseDetails
         location={props.location}
         title={props.title}
         amount={props.amount}
       />
-    </div>
+    </Card>
   );
 }
 
