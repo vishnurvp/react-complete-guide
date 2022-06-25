@@ -1,0 +1,12 @@
+.expense-location {
+    display: flex;
+    flex-direction: column;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: rgb(52, 52, 52);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+  }

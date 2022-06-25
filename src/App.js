@@ -14,20 +14,20 @@ function App() {
       title: "New TV", 
       amount: 5000, 
       date: new Date(2021, 2, 12), 
-      location: "delhi", },
+      location: "Tumkur", },
     {
       id: "e3",
       title: "Car Insurance",
       amount: 4000,
       date: new Date(2022, 2, 28),
-      location: "banglore",
+      location: "Manglore",
     },
     {
       id: "e4",
       title: "New Desk (Wooden)",
       amount: 3000,
       date: new Date(2022, 5, 12),
-      location: "ecity",
+      location: "E city",
     },
   ];
 
@@ -40,7 +40,7 @@ function App() {
         amount={expense.amount}
         date={expense.date}
         location = {expense.location}
-      ></ExpenseItem>)
+      />)
       })}
     </div>
   );
