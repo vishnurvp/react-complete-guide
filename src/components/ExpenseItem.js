@@ -1,11 +1,25 @@
 // component in react js is just a javascript function
+
+import './ExpenseItem.css';
+
 function ExpenseItem() {
-    return (<div>
-        <h2>Expense Item</h2>
-        <h3>Food Rs 10</h3>
-        <h3>Petrol Rs 100</h3>
-        <h3>Movies Rs 200</h3>
-        </div>)
+
+    const expenseDate = new Date(2022, 2, 28);
+    const expenseTitle = 'Car Insurance';
+    const expenseAmmount = 10000;
+    const locationOfExpenditure = 'Banglore';
+
+    // should return only one root element
+    return (
+    <div className='expense-item'>
+        <div>{expenseDate.toISOString()}</div>
+        <div>{locationOfExpenditure}</div>
+        <div className='expense-item__description'>
+            <h2>{expenseTitle}</h2>
+            <div className='expense-item__price'>{expenseAmmount} Rs</div>
+        </div>
+    </div>
+    )
 }
 
 export default ExpenseItem;
