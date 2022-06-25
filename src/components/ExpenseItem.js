@@ -2,21 +2,22 @@
 
 import './ExpenseItem.css';
 
-function ExpenseItem() {
-
-    const expenseDate = new Date(2022, 2, 28);
-    const expenseTitle = 'Car Insurance';
-    const expenseAmmount = 10000;
-    const locationOfExpenditure = 'Banglore';
-
+function ExpenseItem(props) {
+    const month = props.date.toLocaleString('en-IN', {month: 'long'});
+    const day = props.date.toLocaleString('en-IN', {day: '2-digit'});
+    const year = props.date.getFullYear();
     // should return only one root element
     return (
     <div className='expense-item'>
-        <div>{expenseDate.toISOString()}</div>
-        <div>{locationOfExpenditure}</div>
+        <div>
+            <div>{month} </div>
+            <div>{year} </div>
+            <div>{day} </div>
+        </div>
+        <div>{props.location}</div>
         <div className='expense-item__description'>
-            <h2>{expenseTitle}</h2>
-            <div className='expense-item__price'>{expenseAmmount} Rs</div>
+            <h2>{props.title}</h2>
+            <div className='expense-item__price'>{props.amount} Rs</div>
         </div>
     </div>
     )
