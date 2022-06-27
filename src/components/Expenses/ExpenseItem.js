@@ -7,6 +7,15 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
   // should return only one root element
+
+  const changeTitleClickHandler = () => {
+    console.log('Change Title clicked');
+  }
+
+  const deleteClickHandler = () => {
+    console.log('Delete Expense clicked');
+  }
+
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -15,6 +24,8 @@ const ExpenseItem = (props) => {
         title={props.title}
         amount={props.amount}
       />
+      <button onClick={changeTitleClickHandler}>Change Title</button>
+      <button onClick={deleteClickHandler}>Delete Expense</button>
     </Card>
   );
 }
