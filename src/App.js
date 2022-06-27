@@ -1,7 +1,6 @@
-import ExpenseItem from "./components/Expenses/ExpenseItem";
-import Card from './components/UI/Card';
-import './components/Expenses/ExpenseItem.css';
 
+import './components/Expenses/ExpenseItem.css';
+import Expenses from "./components/Expenses/Expenses";
 const App = () => {
   const expenses = [
     {
@@ -36,16 +35,7 @@ const App = () => {
   return (
     <div>
       <h2>Let's get started!</h2>
-      <Card className = 'expenses'>
-        {expenses.map((expense)=>{
-          return (<ExpenseItem
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
-          location = {expense.location}
-        />)
-        })}
-      </Card>
+      <Expenses items={expenses}></Expenses>
     </div>
   );
 }
