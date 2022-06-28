@@ -1,6 +1,7 @@
 // component in react js is just a javascript function
 // import React, {useState} from 'react';
 
+
 import Card from '../UI/Card';
 import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
@@ -13,8 +14,8 @@ const ExpenseItem = (props) => {
   // const [amount, setAmount] = useState(props.amount);
   
   // const changeTitleClickHandler = () => {
-  //   setTitle('Updated!');
-  //   console.log(title);
+  //   setTitle(props.title);
+  //   // console.log(title);
   // }
 
   // const deleteClickHandler = () => {
