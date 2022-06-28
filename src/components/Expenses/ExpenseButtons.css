@@ -1,0 +1,9 @@
+.expense-buttons {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #09505b;
+    border: 1px solid rgb(154, 153, 153);
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
