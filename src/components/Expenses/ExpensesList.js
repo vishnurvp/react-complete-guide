@@ -10,7 +10,7 @@ const ExpensesList = (props) => {
 
   if (props.items.length === 1) {
     return (
-      <div>
+      <ul className="expenses-list">
         {props.items.map((expense) => (
           <ExpenseItem
             key={expense.id}
@@ -23,7 +23,7 @@ const ExpensesList = (props) => {
         <h2 className="expenses-list__fallback">
           There is only one expense here. Please add more!!
         </h2>
-      </div>
+      </ul>
     );
   }
 
