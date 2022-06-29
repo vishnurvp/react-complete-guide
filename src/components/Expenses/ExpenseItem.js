@@ -10,15 +10,17 @@ const ExpenseItem = (props) => {
   // should return only one root element
 
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date} />
-      <ExpenseDetails
-        location={props.location}
-        title={props.title}
-        amount={props.amount}
-      />
-      <ExpenseButtons/>
-    </Card>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date} />
+        <ExpenseDetails
+          location={props.location}
+          title={props.title}
+          amount={props.amount}
+        />
+        <ExpenseButtons />
+      </Card>
+    </li>
   );
 };
 
