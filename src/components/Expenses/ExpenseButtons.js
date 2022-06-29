@@ -2,7 +2,7 @@ import "./ExpenseButtons.css";
 
 const ExpenseButtons = (props) => {
   const changeTitleClickHandler = () => {
-    console.log("change Title clicked");
+    props.onTitleChange();
   };
 
   const deleteClickHandler = () => {
@@ -10,7 +10,7 @@ const ExpenseButtons = (props) => {
   };
 
   const changeExpenseClickHandler = () => {
-    console.log("Change Expense clicked");
+    props.onAmountChange();
   };
 
   return (
